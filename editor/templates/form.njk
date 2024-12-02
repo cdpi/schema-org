@@ -10,3 +10,7 @@
 	<label>{{ text }}</label>
 </div>
 {% endmacro %}
+
+{% macro fake(name, value = "") %}
+<p class="input text" contenteditable="true" spellcheck="false"></p>
+{% endmacro %}

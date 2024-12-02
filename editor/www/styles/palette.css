@@ -1,0 +1,30 @@
+
+/* https://www.colorhunt.co/palette/a6aebfc5d3e8d0e8c5fff8de */
+
+:root
+	{
+	/* https://www.colourlovers.com/palette/4887388/unpassed_test */
+	--bright-rasberries: #AD2159;
+	--lush-robe: #E6375D;
+	--darling: #F76865;
+	--feeling-orange: #FF9F80;
+	--come-on: #FFDABA;
+
+	/* https://coolors.co/d36135-191716-440d0f-603a40-af9bb6 */
+	--apricot: #ffcdb2;
+	--melon: #ffb4a2;
+	--salmon-pink: #e5989b;
+	--old-rose: #b5838d;
+	--dim-gray: #6d6875;
+	/*
+	$gradient-top: linear-gradient(0deg, #ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
+	$gradient-right: linear-gradient(90deg, #ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
+	$gradient-bottom: linear-gradient(180deg, #ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
+	$gradient-left: linear-gradient(270deg, #ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
+	$gradient-top-right: linear-gradient(45deg, #ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
+	$gradient-bottom-right: linear-gradient(135deg, #ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
+	$gradient-top-left: linear-gradient(225deg, #ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
+	$gradient-bottom-left: linear-gradient(315deg, #ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
+	$gradient-radial: radial-gradient(#ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
+	*/
+	}
