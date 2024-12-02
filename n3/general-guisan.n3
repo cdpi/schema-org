@@ -1,0 +1,5 @@
+
+id:general-guisan a so:Street .
+
+id:general-guisan so:name "Avenue du Général-Guisan" .
+id:general-guisan so:containedInPlace id:sierre .

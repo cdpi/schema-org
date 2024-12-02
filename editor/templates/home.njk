@@ -1,0 +1,30 @@
+{% extends "html5.njk" %}
+
+{% import "form.njk" as form %}
+
+{% block body %}
+
+<form>
+	{{ form.field("id") }}
+	{{ form.field("label") }}
+	{{ form.field("comment") }}
+	<button type="submit">Enregistrer</button>
+</form>
+
+<!--
+{{ abc }}
+-->
+
+<!--
+// Precompiling a whole directory
+$ nunjucks-precompile views > templates.js
+-->
+
+<!--
+{{ form.label("Nom d'utilisateur") }}
+{{ form.field("username") }}
+{{ form.label("Mod de passe") }}
+{{ form.field("password", type = "password") }}
+-->
+
+{% endblock %}
