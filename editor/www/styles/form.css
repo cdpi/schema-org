@@ -1,40 +1,18 @@
 
-:root
-	{
-	font-size: 20px;
-	}
-body
-	{
-	background-color: var(--apricot);
-	background-color: var(--melon);
-	background-color: var(--salmon-pink);
-	background-color: var(--old-rose);
-	background-color: var(--dim-gray);
-
-	color: var(--dim-gray);
-	background-color: var(--apricot);
-	background-color: #FAFAFA;
-
-	color: var(--come-on);
-	background-color: var(--bright-rasberries);
-
-	font-family: "Poppins", sans-serif;
-	font-weight: 400;
-	font-size: 1rem;
-	font-style: normal;
-	}
-h1
-	{
-	font-weight: 800;
-	font-size: 3rem;
-	}
-
 .input.text
 	{
-	color: var(--bright-rasberries);
-	background-color: var(--come-on);
+	background-color: #E2E2E2;
+	background-color: #FFF;
+	background-color: var(--apricot);
 	padding: .25rem .5rem;
 	border-radius: .25rem;
+	}
+
+span.input.text
+	{
+	min-width: 8rem;
+	vertical-align: middle;
+	display: inline-block;
 	}
 
 .input.text:focus

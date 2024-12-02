@@ -1,15 +1,39 @@
+{% import "form.njk" as form %}
+
+{% set lang = "fr-CH" %}
+
 {% extends "html5.njk" %}
 
-{% import "form.njk" as form %}
+{% block head %}
+<link rel="stylesheet" href="/styles/styles.css" />
+<link rel="stylesheet" href="/styles/palette.css" />
+<link rel="stylesheet" href="/styles/form.css" />
+{% endblock %}
 
 {% block body %}
 
+<h1>Éditeur</h1>
+
+<div>
+	<span class="label">Depuis:</span>
+	<span class="input text" contenteditable="true" spellcheck="false"></span>
+	<span class="label">A:</span>
+	<span class="input text" contenteditable="true" spellcheck="false"></span>
+</div>
+<p id="{{id}}" class="input text" contenteditable="true" spellcheck="false">{{value | escape}}</p>
+
+{{ form.fake("name") }}
+{{ form.fake("df") }}
+{{ form.fake("sdsdd") }}
+
+<!--
 <form>
 	{{ form.field("id") }}
 	{{ form.field("label") }}
 	{{ form.field("comment") }}
 	<button type="submit">Enregistrer</button>
 </form>
+-->
 
 <!--
 {{ abc }}
@@ -26,5 +50,7 @@ $ nunjucks-precompile views > templates.js
 {{ form.label("Mod de passe") }}
 {{ form.field("password", type = "password") }}
 -->
+
+<script src="/scripts/fake-form.js"></script>
 
 {% endblock %}

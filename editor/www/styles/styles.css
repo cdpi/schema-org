@@ -1,4 +1,37 @@
 
+:root
+	{
+	font-size: 20px;
+	}
+
 body
 	{
+	/*
+	background-color: var(--apricot);
+	background-color: var(--melon);
+	background-color: var(--salmon-pink);
+	background-color: var(--old-rose);
+	background-color: var(--dim-gray);
+
+	color: var(--dim-gray);
+	background-color: var(--apricot);
+	background-color: #FAFAFA;
+
+	color: var(--come-on);
+	background-color: var(--bright-rasberries);
+	*/
+
+	color: var(--dim-gray);
+	background-color: var(--salmon-pink);
+
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	font-style: normal;
+	}
+
+h1
+	{
+	font-weight: 600;
+	font-size: 3rem;
 	}

@@ -1,16 +1,16 @@
 
 {% macro field(name, value = "", type = "text") %}
 <div class="field">
-	<input type="{{ type }}" name="{{ name }}" value="{{ value | escape }}" />
+	<input type="{{type}}" name="{{name}}" value="{{value | escape}}" />
 </div>
 {% endmacro %}
 
 {% macro label(text) %}
 <div>
-	<label>{{ text }}</label>
+	<label>{{text}}</label>
 </div>
 {% endmacro %}
 
-{% macro fake(name, value = "") %}
-<p class="input text" contenteditable="true" spellcheck="false"></p>
+{% macro fake(id, value = "") %}
+<p id="{{id}}" class="input text" contenteditable="true" spellcheck="false">{{value | escape}}</p>
 {% endmacro %}

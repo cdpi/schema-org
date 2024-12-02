@@ -1,0 +1,17 @@
+{
+    "valais": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "https://schema.org/Place",
+        "https://schema.org/name": "\"Valais\"",
+        "https://schema.org/alternateName": "\"VS\""
+    },
+    "sierre": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "https://schema.org/City",
+        "https://schema.org/name": "\"Sierre\"",
+        "https://schema.org/containedInPlace": "valais"
+    },
+    "general-guisan": {
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": "https://schema.org/Street",
+        "https://schema.org/name": "\"Avenue du Général-Guisan\"",
+        "https://schema.org/containedInPlace": "sierre"
+    }
+}

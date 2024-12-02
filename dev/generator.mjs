@@ -3,6 +3,10 @@ import { writeFileSync } from "node:fs";
 import { Parser } from "./parser.mjs";
 import { isNull } from "./util.mjs";
 
+//import { generateAll } from "./schema-org/generator.mjs";
+//generateAll("docs/schema-org");
+
+
 function generate(types, destination)
 	{
 	let labels = [];

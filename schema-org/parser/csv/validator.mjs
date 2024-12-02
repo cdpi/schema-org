@@ -1,6 +1,8 @@
 
-import { isNull } from "../util.mjs";
-import { SCHEMAS } from "../schema-org.mjs";
+import { isNull } from "../../util.mjs";
+import { SchemaOrg } from "../../schema-org.mjs";
+
+const SCHEMAS = SchemaOrg.SCHEMAS.map(schema => schema.uri);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -86,12 +88,14 @@ function validatePartOf(value)
 	{
 	validateBlankOrNotContainsComma(value)
 
-	if (!value.isBlank())
+	if (value.isBlank())
 		{
-		if (!SCHEMAS.includes(value))
-			{
-			throw new Error(value);
-			}
+		value = "https://schema.org";
+		}
+
+	if (!SCHEMAS.includes(value))
+		{
+		throw new Error(value);
 		}
 	}
 

@@ -1,5 +1,5 @@
 
-import { isNull } from "./util.mjs";
+import { isNull } from "../../schema-org/util.mjs";
 
 console.assert("".isBlank());
 console.assert("   ".isBlank());
