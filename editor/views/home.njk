@@ -1,0 +1,19 @@
+{% extends "editor.njk" %}
+
+{% import "form.njk" as form %}
+
+{% block head %}
+<link rel="stylesheet" href="/styles/styles.css" />
+<link rel="stylesheet" href="/styles/palette.css" />
+<link rel="stylesheet" href="/styles/form.css" />
+{% endblock %}
+
+{% block body %}
+
+<h1>Éditeur</h1>
+
+<div id="form"></div>
+
+<script type="module" src="/scripts/thing.mjs"></script>
+
+{% endblock %}

@@ -14,6 +14,13 @@ Un peu d'organisation dans la structure:
  - /schema-org/ Scripts Node (pas grand chose, parser CSV pour l'instant).
  - /tests/ Mini tests (console.assert)
 
+Un peu d'organisation dans le dossier editor:
+
+ - /database/ Base de données SQLite.
+ - /lib/ Scripts application.
+ - /public/ Au lieu de www pour dossier static express.
+ - /views/ Au lieu de templates (logique Application express ?).
+
 ### TODO
 
 Structure de la base de données + récursivité (pour hiérarchie des types (Thing))
