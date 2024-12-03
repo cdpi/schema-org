@@ -1,6 +1,7 @@
 {% import "form.njk" as form %}
 
-{% set lang = "fr-CH" %}
+{% set lang = "fr" %}
+{% set title = "Éditeur" %}
 
 {% extends "html5.njk" %}
 
@@ -14,6 +15,7 @@
 
 <h1>Éditeur</h1>
 
+<!--
 <div>
 	<span class="label">Depuis:</span>
 	<span class="input text" contenteditable="true" spellcheck="false"></span>
@@ -25,32 +27,10 @@
 {{ form.fake("name") }}
 {{ form.fake("df") }}
 {{ form.fake("sdsdd") }}
-
-<!--
-<form>
-	{{ form.field("id") }}
-	{{ form.field("label") }}
-	{{ form.field("comment") }}
-	<button type="submit">Enregistrer</button>
-</form>
 -->
 
-<!--
-{{ abc }}
--->
+<div id="form"></div>
 
-<!--
-// Precompiling a whole directory
-$ nunjucks-precompile views > templates.js
--->
-
-<!--
-{{ form.label("Nom d'utilisateur") }}
-{{ form.field("username") }}
-{{ form.label("Mod de passe") }}
-{{ form.field("password", type = "password") }}
--->
-
-<script src="/scripts/fake-form.js"></script>
+<script type="module" src="/scripts/thing.mjs"></script>
 
 {% endblock %}

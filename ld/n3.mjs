@@ -36,8 +36,8 @@ async function parse(path)
 		});
 	}
 
-await parse("n3/valais.n3", subjects);
-await parse("n3/sierre.n3", subjects);
-await parse("n3/general-guisan.n3", subjects);
+await parse("valais.n3", subjects);
+await parse("sierre.n3", subjects);
+await parse("general-guisan.n3", subjects);
 
 writeFileSync("n3.json", JSON.stringify(subjects, null, 4));

@@ -1,6 +1,7 @@
 
-/node_modules/
+/ld/all.json
+/ld/n3.json
 
-/all.json
+/node_modules/
 
 /*-lock.*

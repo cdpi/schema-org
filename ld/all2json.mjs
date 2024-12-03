@@ -1,6 +1,6 @@
 
 import { writeFileSync } from "node:fs";
-import { Parser } from "./schema-org/parser/csv/parser.mjs";
+import { Parser } from "../schema-org/parser/csv/parser.mjs";
 
 let parser = new Parser();
 
