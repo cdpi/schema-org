@@ -1,9 +1,6 @@
 
-/database/things.sqlite
-
-/ld/all.json
-/ld/n3.json
-
 /node_modules/
 
-/*-lock.*
+*.csv
+*.sqlite
+*-lock.*

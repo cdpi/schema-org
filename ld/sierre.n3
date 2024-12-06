@@ -1,9 +1,0 @@
-#@prefix id: <https://swissld.github.io/namespaces/id#> .
-#@prefix id: <> .
-#@prefix so: <https://schema.org/> .
-
-id:sierre a so:City .
-
-id:sierre so:name "Sierre" .
-#<#sierre> so:nasdsdme 3960 .
-id:sierre so:containedInPlace id:valais .

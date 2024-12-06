@@ -1,8 +1,0 @@
-#@prefix id: <https://swissld.github.io/namespaces/id#> .
-#@prefix id: <> .
-#@prefix so: <https://schema.org/> .
-
-id:valais a so:Place .
-
-id:valais so:name "Valais" .
-id:valais so:alternateName "VS" .
