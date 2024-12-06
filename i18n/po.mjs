@@ -1,14 +1,21 @@
 
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 
-let po = readFileSync("fr1.po", "utf-8");
+let po = readFileSync("fr.po", "utf-8");
 
-//console.log(po);
+let messages = [...po.matchAll(/msgid \"(.+)\"\nmsgstr \"(.+)?\"/mg)];
 
-//msgid "abridged"
-//let msgid = new RegExp("^msgid \".+\"$", "m");
-let msgid = new RegExp("msgid \".+\"");
+messages = messages.map(message =>
+	{
+	let msgid = message[1];
 
-let all = [...po.matchAll()];
+	let msgstr = (message[2] === undefined) ? null : message[2];
 
-console.log(all);
+	return [msgid, msgstr];
+	});
+
+messages = messages.reduce((previous, current) => { previous[current[0]] = current[1]; return previous; }, {});
+
+//console.log(messages);
+
+writeFileSync("fr.json", JSON.stringify(messages, null, 1));
