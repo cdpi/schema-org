@@ -2,6 +2,9 @@
 import { readFileSync } from "node:fs";
 import { parse as parseCSV } from "csv-parse/sync";
 
+const propertiesFilename = "schemaorg-all-https-properties.csv";
+const typesFilename = "schemaorg-all-https-types.csv";
+
 const isBlank = text => (text.trim().length === 0);
 
 const asArray = text => text.split(",").map(value => value.trim());
@@ -43,9 +46,36 @@ const parseProperties = path =>
 		});
 	};
 
+const parseTypes = path =>
+	{
+	let csv = readFileSync(path, "utf-8");
+
+	let records = parse(csv);
+
+	return records.map(record =>
+		{
+		let type = {};
+
+		type.id = columnAsString(record.id);
+		type.label = columnAsString(record.label);
+		type.comment = columnAsString(record.comment);
+
+		type.supersedes = columnAsString(record.supersedes);
+		type.supersededBy = columnAsString(record.supersededBy);
+		type.isPartOf = columnAsString(record.isPartOf);
+
+		return type;
+		});
+	};
+
 export
 	{
+	propertiesFilename,
+	typesFilename,
+
 	columnAsArray,
 	columnAsString,
-	parseProperties
+
+	parseProperties,
+	parseTypes
 	};
