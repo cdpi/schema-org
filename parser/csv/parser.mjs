@@ -1,9 +1,5 @@
 
-//import { readFileSync } from "node:fs";
 import { parse as parseCSV } from "csv-parse/sync";
-
-//const propertiesFilename = "schemaorg-all-https-properties.csv";
-//const typesFilename = "schemaorg-all-https-types.csv";
 
 const isBlank = text => (text.trim().length === 0);
 
@@ -21,8 +17,6 @@ const parse = csv => parseCSV(csv, {columns: true, skipEmptyLines: true});
 
 const parseProperties = csv =>
 	{
-	//let csv = readFileSync(path, "utf-8");
-
 	let records = parse(csv);
 
 	return records.map(record =>
@@ -48,8 +42,6 @@ const parseProperties = csv =>
 
 const parseTypes = csv =>
 	{
-	//let csv = readFileSync(path, "utf-8");
-
 	let records = parse(csv);
 
 	return records.map(record =>
@@ -74,15 +66,6 @@ const parseTypes = csv =>
 
 export
 	{
-	//propertiesFilename,
-	//typesFilename,
-	isBlank,
-	asArray,
-	asString,
-	column,
-	columnAsArray,
-	columnAsString,
-	parse,
 	parseProperties,
 	parseTypes
 	};

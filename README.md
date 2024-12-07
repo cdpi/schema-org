@@ -11,9 +11,10 @@ Un peu d'organisation dans la structure:
  - /database/ SQL et script pour générer la base de données.
  - /editor/ Éditeur minimaliste de données basées sur Schema.org.
  - /i18n/ Traduction des labels en français.
- - /ld/ Essai de formats OpenData.
- - /schema-org/ Scripts Node (pas grand chose, parser CSV pour l'instant).
- - /tests/ Mini tests (console.assert)
+ - X /ld/ Essai de formats OpenData. SUPPRIMÉ
+ - /parser/...
+ - /schema-org/ Scripts Node (pas grand chose, parser CSV pour l'instant). DÉPLACÉ dans parser
+ - X /tests/ Mini tests (console.assert) SUPPRIMÉ
 
 Un peu d'organisation dans le dossier editor:
 
