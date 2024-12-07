@@ -125,8 +125,9 @@ msgstr "acteurs"
 msgid "addOn"
 msgstr ""
 
+#, fuzzy
 msgid "additionalName"
-msgstr ""
+msgstr "nom supplémentaire"
 
 msgid "additionalNumberOfGuests"
 msgstr ""
@@ -207,7 +208,7 @@ msgid "alignmentType"
 msgstr ""
 
 msgid "alternateName"
-msgstr ""
+msgstr "nom alternatif"
 
 msgid "alternativeHeadline"
 msgstr ""
@@ -246,7 +247,7 @@ msgid "antagonist"
 msgstr ""
 
 msgid "appearance"
-msgstr ""
+msgstr "apparence"
 
 msgid "applicableCountry"
 msgstr ""
@@ -291,10 +292,10 @@ msgid "archivedAt"
 msgstr ""
 
 msgid "area"
-msgstr ""
+msgstr "zone"
 
 msgid "areaServed"
-msgstr ""
+msgstr "zone desservie"
 
 msgid "arrivalAirport"
 msgstr ""
@@ -332,14 +333,15 @@ msgstr ""
 msgid "artform"
 msgstr ""
 
+#, fuzzy
 msgid "articleBody"
-msgstr ""
+msgstr "corps de l'article"
 
 msgid "articleSection"
 msgstr ""
 
 msgid "artist"
-msgstr ""
+msgstr "artiste"
 
 msgid "artworkSurface"
 msgstr ""
@@ -399,7 +401,7 @@ msgid "audienceType"
 msgstr ""
 
 msgid "audio"
-msgstr ""
+msgstr "audio"
 
 msgid "auditDate"
 msgstr ""
@@ -519,7 +521,7 @@ msgid "biomechnicalClass"
 msgstr ""
 
 msgid "birthDate"
-msgstr ""
+msgstr "date de naissance"
 
 msgid "birthPlace"
 msgstr ""
@@ -705,13 +707,13 @@ msgid "certificationStatus"
 msgstr ""
 
 msgid "character"
-msgstr ""
+msgstr "personnage"
 
 msgid "characterAttribute"
 msgstr ""
 
 msgid "characterName"
-msgstr ""
+msgstr "nom de personnage"
 
 msgid "cheatCode"
 msgstr ""
@@ -747,10 +749,10 @@ msgid "cholesterolContent"
 msgstr ""
 
 msgid "circle"
-msgstr ""
+msgstr "cercle"
 
 msgid "citation"
-msgstr ""
+msgstr "citation"
 
 msgid "claimInterpreter"
 msgstr ""
@@ -774,7 +776,7 @@ msgid "coach"
 msgstr ""
 
 msgid "code"
-msgstr ""
+msgstr "code"
 
 msgid "codeRepository"
 msgstr ""
@@ -789,13 +791,13 @@ msgid "codingSystem"
 msgstr ""
 
 msgid "colleague"
-msgstr ""
+msgstr "collègue"
 
 msgid "colleagues"
-msgstr ""
+msgstr "collègues"
 
 msgid "collection"
-msgstr ""
+msgstr "collection"
 
 msgid "collectionSize"
 msgstr ""
@@ -828,7 +830,7 @@ msgid "competitor"
 msgstr ""
 
 msgid "composer"
-msgstr ""
+msgstr "compositeur"
 
 msgid "comprisedOf"
 msgstr ""
@@ -837,7 +839,7 @@ msgid "conditionsOfAccess"
 msgstr ""
 
 msgid "confirmationNumber"
-msgstr ""
+msgstr "numéro de confirmation"
 
 msgid "connectedTo"
 msgstr ""
@@ -855,7 +857,7 @@ msgid "contactPoints"
 msgstr ""
 
 msgid "contactType"
-msgstr ""
+msgstr "type de contact"
 
 msgid "contactlessPayment"
 msgstr ""
@@ -1071,7 +1073,7 @@ msgid "dateCreated"
 msgstr "date de création"
 
 msgid "dateDeleted"
-msgstr ""
+msgstr "date de suppression"
 
 msgid "dateIssued"
 msgstr ""
@@ -1299,7 +1301,7 @@ msgid "duplicateTherapy"
 msgstr ""
 
 msgid "duration"
-msgstr ""
+msgstr "durée"
 
 msgid "durationOfWarranty"
 msgstr ""
@@ -1398,13 +1400,15 @@ msgid "encodesCreativeWork"
 msgstr ""
 
 msgid "encoding"
-msgstr ""
+msgstr "encodage"
 
+#, fuzzy
 msgid "encodingFormat"
-msgstr ""
+msgstr "format d'encodage"
 
+#, fuzzy
 msgid "encodingType"
-msgstr ""
+msgstr "type d'encodage"
 
 msgid "encodings"
 msgstr ""
@@ -1551,7 +1555,7 @@ msgid "expressedIn"
 msgstr ""
 
 msgid "familyName"
-msgstr ""
+msgstr "nom de famille"
 
 msgid "fatContent"
 msgstr ""
@@ -1635,7 +1639,7 @@ msgid "freeShippingThreshold"
 msgstr ""
 
 msgid "frequency"
-msgstr ""
+msgstr "fréquence"
 
 msgid "fromLocation"
 msgstr ""
@@ -1682,8 +1686,9 @@ msgstr ""
 msgid "gamePlatform"
 msgstr ""
 
+#, fuzzy
 msgid "gameServer"
-msgstr ""
+msgstr "serveur de jeu"
 
 msgid "gameTip"
 msgstr ""

@@ -161,25 +161,6 @@ class Parser
 		return all;
 		}
 
-	/**
-	 * @param {String} what
-	 */
-	url(what)
-		{
-		return `https://github.com/schemaorg/schemaorg/raw/refs/heads/main/data/releases/${this.release}/schemaorg-all-https-${what}.csv`;
-		}
-
-	/**
-	 * @param {String} url
-	 */
-	async download(url)
-		{
-		let request = await fetch(url);
-
-		let text = await request.text();
-
-		return text;
-		}
 	}
 
 const _Parser = Parser;

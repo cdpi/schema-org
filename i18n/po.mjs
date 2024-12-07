@@ -1,21 +1,67 @@
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { downloadProperties, downloadTypes } from "../parser/csv/downloader.mjs";
+import { parseProperties, parseTypes } from "../parser/csv/parser.mjs";
 
-let po = readFileSync("fr.po", "utf-8");
+const label = object => object.label;
 
-let messages = [...po.matchAll(/msgid \"(.+)\"\nmsgstr \"(.+)?\"/mg)];
+const msg = label => `msgid "${label}"
+msgstr ""
 
-messages = messages.map(message =>
+`;
+
+/**
+ * @param {[]} array un tableau d'objet properties ou types qui contient un champs label.
+ */
+function po(array)
 	{
-	let msgid = message[1];
+	return array.map(label).map(msg).join("");
+	}
 
-	let msgstr = (message[2] === undefined) ? null : message[2];
+/**
+ * @param {String} release
+ */
+async function properties(release)
+	{
+	return po(parseProperties(await downloadProperties(release)));
+	}
 
-	return [msgid, msgstr];
-	});
+/**
+ * @param {String} release
+ */
+async function types(release)
+	{
+	return po(parseTypes(await downloadTypes(release)));
+	}
 
-messages = messages.reduce((previous, current) => { previous[current[0]] = current[1]; return previous; }, {});
+/**
+ * @param {String} po
+ */
+function poToObject(po)
+	{
+	// TODO: fuzzy
+	/*
+	#, fuzzy
+	msgid "additionalName"
+	msgstr "nom supplémentaire"
+	*/
+	let messages = [...po.matchAll(/msgid \"(.+)\"\nmsgstr \"(.+)?\"/mg)];
 
-//console.log(messages);
+	messages = messages.map(message =>
+		{
+		let msgid = message[1];
+	
+		let msgstr = (message[2] === undefined) ? null : message[2];
+	
+		return [msgid, msgstr];
+		});
 
-writeFileSync("fr.json", JSON.stringify(messages, null, 1));
+	return messages.reduce((previous, current) => { previous[current[0]] = current[1]; return previous; }, {});
+	}
+
+export
+	{
+	po,
+	properties,
+	types,
+	poToObject
+	};

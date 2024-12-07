@@ -1,6 +1,12 @@
 
 /node_modules/
 
+/i18n/*.po
+
+/i18n/**/*.json
+
 *.csv
+*.mo
 *.sqlite
+
 *-lock.*
