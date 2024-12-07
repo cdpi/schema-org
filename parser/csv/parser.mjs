@@ -1,9 +1,9 @@
 
-import { readFileSync } from "node:fs";
+//import { readFileSync } from "node:fs";
 import { parse as parseCSV } from "csv-parse/sync";
 
-const propertiesFilename = "schemaorg-all-https-properties.csv";
-const typesFilename = "schemaorg-all-https-types.csv";
+//const propertiesFilename = "schemaorg-all-https-properties.csv";
+//const typesFilename = "schemaorg-all-https-types.csv";
 
 const isBlank = text => (text.trim().length === 0);
 
@@ -19,9 +19,9 @@ const columnAsString = text => column(text, asString);
 
 const parse = csv => parseCSV(csv, {columns: true, skipEmptyLines: true});
 
-const parseProperties = path =>
+const parseProperties = csv =>
 	{
-	let csv = readFileSync(path, "utf-8");
+	//let csv = readFileSync(path, "utf-8");
 
 	let records = parse(csv);
 
@@ -46,9 +46,9 @@ const parseProperties = path =>
 		});
 	};
 
-const parseTypes = path =>
+const parseTypes = csv =>
 	{
-	let csv = readFileSync(path, "utf-8");
+	//let csv = readFileSync(path, "utf-8");
 
 	let records = parse(csv);
 
@@ -59,7 +59,11 @@ const parseTypes = path =>
 		type.id = columnAsString(record.id);
 		type.label = columnAsString(record.label);
 		type.comment = columnAsString(record.comment);
-
+		type.subTypeOf = columnAsArray(record.subTypeOf);
+		type.enumerationtype = columnAsString(record.enumerationtype);
+		type.equivalentClass = columnAsString(record.equivalentClass);
+		type.properties = columnAsArray(record.properties);
+		type.subTypes = columnAsArray(record.subTypes);
 		type.supersedes = columnAsString(record.supersedes);
 		type.supersededBy = columnAsString(record.supersededBy);
 		type.isPartOf = columnAsString(record.isPartOf);
@@ -70,12 +74,15 @@ const parseTypes = path =>
 
 export
 	{
-	propertiesFilename,
-	typesFilename,
-
+	//propertiesFilename,
+	//typesFilename,
+	isBlank,
+	asArray,
+	asString,
+	column,
 	columnAsArray,
 	columnAsString,
-
+	parse,
 	parseProperties,
 	parseTypes
 	};

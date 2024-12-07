@@ -24,4 +24,6 @@ Un peu d'organisation dans le dossier editor:
 
 ### TODO
 
+Maîtriser un peu plus Git car conflit...
+
 Structure de la base de données + récursivité (pour hiérarchie des types (Thing))
