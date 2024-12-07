@@ -1,11 +1,14 @@
 
 CREATE TABLE property
 	(
-	id TEXT NOT NULL,
-	label TEXT NOT NULL,
-	comment TEXT NOT NULL,
+	id TEXT,
+	label TEXT,
+	comment TEXT,
 	subPropertyOf TEXT,
 	equivalentProperty TEXT,
+	subproperties TEXT,
+	domainIncludes TEXT,
+	rangeIncludes TEXT,
 	inverseOf TEXT,
 	supersedes TEXT,
 	supersededBy TEXT,

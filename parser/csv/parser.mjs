@@ -26,7 +26,7 @@ const parseProperties = csv =>
 		property.id = columnAsString(record.id);
 		property.label = columnAsString(record.label);
 		property.comment = columnAsString(record.comment);
-		property.subPropertyOf = columnAsString(record.subPropertyOf);
+		property.subPropertyOf = columnAsArray(record.subPropertyOf);
 		property.equivalentProperty = columnAsString(record.equivalentProperty);
 		property.subproperties = columnAsArray(record.subproperties);
 		property.domainIncludes = columnAsArray(record.domainIncludes);
@@ -53,7 +53,7 @@ const parseTypes = csv =>
 		type.comment = columnAsString(record.comment);
 		type.subTypeOf = columnAsArray(record.subTypeOf);
 		type.enumerationtype = columnAsString(record.enumerationtype);
-		type.equivalentClass = columnAsString(record.equivalentClass);
+		type.equivalentClass = columnAsArray(record.equivalentClass);
 		type.properties = columnAsArray(record.properties);
 		type.subTypes = columnAsArray(record.subTypes);
 		type.supersedes = columnAsString(record.supersedes);
