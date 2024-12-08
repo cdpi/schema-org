@@ -6,15 +6,4 @@ Mon but était de créer un dépôt de données ouvertes pour ma région... peut
 
 ### Dossiers
 
-Un peu d'organisation dans la structure:
-
- - /database/ SQL et script pour générer la base de données.
- - /editor/ Éditeur minimaliste de données basées sur Schema.org.
- - /i18n/ Traduction des labels en français.
- - /parser/ Scripts Node (pas grand chose, parser CSV pour l'instant).
-
-### TODO
-
-Maîtriser un peu plus Git car conflit...
-
-Structure de la base de données + récursivité (pour hiérarchie des types (Thing))
+Un peu d’organisation dans la structure (chaque dossier a son readme)

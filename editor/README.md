@@ -1,8 +1,8 @@
 # editor
 
-ça fonctionne readme dans dossier ? je suppose que oui...
+Éditeur minimaliste de données basées sur Schema.org (en cours...).
 
-Un peu d'organisation dans le dossier editor:
+Un peu d’organisation dans le dossier editor:
 
  - /database/ Base de données SQLite.
  - /lib/ Scripts application.
