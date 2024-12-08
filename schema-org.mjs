@@ -1,11 +1,5 @@
 
-import { createDatabaseFromCSV } from "./database.mjs";
-
-// node --experimental-sqlite x.mjs
-
 let release = "28.1";
-
-createDatabaseFromCSV("schema-org-csv.sqlite", release);
 
 /*
 const _ATTIC = "https://attic.schema.org";

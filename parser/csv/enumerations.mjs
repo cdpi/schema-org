@@ -1,6 +1,4 @@
 
-import { arrayAsObject } from "./parser.mjs";
-
 /**
  * @param {[]} types
  */
@@ -15,6 +13,8 @@ function getEnumerationMembers(types)
 		if (type.enumerationtype != null)
 			{
 			enumerationMembers.push(type);
+
+			delete types[id];
 			}
 		}
 
@@ -41,8 +41,6 @@ function getEnumerationTypes(enumerationMembers)
  */
 function getEnumerations(types)
 	{
-	return arrayAsObject(types);
-
 	let enumerations = {};
 
 	let enumerationMembers = getEnumerationMembers(types);
@@ -56,11 +54,13 @@ function getEnumerations(types)
 		enumeration.enumerationMembers = [];
 
 		enumerations[enumerationType] = enumeration;
+
+		delete types[enumerationType];
 		});
 
 	enumerationMembers.forEach(enumerationMember =>
 		{
-		//enumerations[enumerationMember.enumerationMemberOf].enumerationMembers.push(enumerationMember);
+		enumerations[enumerationMember.enumerationtype].enumerationMembers.push(enumerationMember);
 		});
 
 	return enumerations;
@@ -68,5 +68,7 @@ function getEnumerations(types)
 
 export
 	{
+	//getEnumerationMembers,
+	//getEnumerationTypes,
 	getEnumerations
 	};

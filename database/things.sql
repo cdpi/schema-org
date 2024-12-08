@@ -89,3 +89,31 @@ SELECT `things_hierarchy`.`label`, COUNT(DISTINCT `things_hierarchy`.`parent`), 
 FROM `things_hierarchy` INNER JOIN `thing` ON (`thing`.`id` = `things_hierarchy`.`parent`)
 GROUP BY `things_hierarchy`.`label`
 ORDER BY 1;
+
+SELECT '--------------------------------------------------------';
+
+WITH RECURSIVE `parents` AS
+	(
+	SELECT `thing`, `parent`
+	FROM `hierarchy`
+
+	UNION ALL
+
+	SELECT
+		`hierarchy`.`thing`,
+		`parents`.`parent`
+	FROM `hierarchy`
+	INNER JOIN `parents` ON (`hierarchy`.`parent` = `parents`.`thing`)
+	WHERE `parents`.`parent` IS NOT NULL
+	)
+SELECT
+	`thing`,
+	JSON_GROUP_ARRAY(DISTINCT `parent`)
+	-- GROUP_CONCAT(`parent`, '.')
+FROM
+	`parents`
+GROUP BY
+	`thing`
+--WHERE
+--	`thing` = 5
+;

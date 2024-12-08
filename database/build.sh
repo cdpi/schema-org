@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-DATABASE=things.sqlite
+#DATABASE=recursive.sqlite
+#rm $DATABASE
+#sqlite3 $DATABASE < thing_hierarchy.sql
 
-rm $DATABASE
+sqlite3 recursive.sqlite < recursive.sql
 
-sqlite3 $DATABASE < schema.sql
-sqlite3 $DATABASE < type.sql
-sqlite3 $DATABASE < property.sql
-sqlite3 $DATABASE < domain.sql
+sqlite3 recursive.sqlite < things.sql > things.txt

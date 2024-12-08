@@ -1,7 +1,7 @@
 
 import { DatabaseSync as SQLite } from "node:sqlite";
-import { downloadProperties, downloadTypes } from "./parser/csv/downloader.mjs";
-import { parse } from "./parser/csv/parser.mjs";
+import { downloadProperties, downloadTypes } from "../parser/csv/downloader.mjs";
+import { parse } from "../parser/csv/parser.mjs";
 
 const column = key => `${key} TEXT`;
 
@@ -14,6 +14,7 @@ const parameter = key => `:${key}`;
 const insert = (name, object) => `INSERT INTO ${name} VALUES (${columns(object, parameter)})`;
 
 /**
+ * @param {String} path
  * @param {String} release
  */
 async function createDatabaseFromCSV(path, release)
@@ -37,9 +38,38 @@ async function createDatabaseFromCSV(path, release)
 	types.forEach(type => insertType.run(type));
 
 	database.exec("COMMIT;");
+
+	database.close();
+	}
+
+/**
+ * @param {String} path
+ */
+function statistics(path)
+	{
+	let database = new SQLite(path);
+
+	/*
+	let tables = database.prepare("SELECT name FROM sqlite_master WHERE type = 'table';").all();
+
+	tables.forEach(table =>
+		{
+		console.log(table.name);
+
+		let columns = database.prepare(`SELECT * FROM pragma table_info(${table.name});`).all();
+
+		columns.forEach(column =>
+			{
+			console.log(column);
+			});
+		});
+	*/
+
+	database.close();
 	}
 
 export
 	{
-	createDatabaseFromCSV
+	createDatabaseFromCSV,
+	statistics
 	};
