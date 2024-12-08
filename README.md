@@ -11,17 +11,7 @@ Un peu d'organisation dans la structure:
  - /database/ SQL et script pour générer la base de données.
  - /editor/ Éditeur minimaliste de données basées sur Schema.org.
  - /i18n/ Traduction des labels en français.
- - X /ld/ Essai de formats OpenData. SUPPRIMÉ
- - /parser/...
- - /schema-org/ Scripts Node (pas grand chose, parser CSV pour l'instant). DÉPLACÉ dans parser
- - X /tests/ Mini tests (console.assert) SUPPRIMÉ
-
-Un peu d'organisation dans le dossier editor:
-
- - /database/ Base de données SQLite.
- - /lib/ Scripts application.
- - /public/ Au lieu de www pour dossier static express.
- - /views/ Au lieu de templates (logique Application express ?).
+ - /parser/ Scripts Node (pas grand chose, parser CSV pour l'instant).
 
 ### TODO
 
