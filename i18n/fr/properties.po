@@ -238,7 +238,7 @@ msgid "annualPercentageRate"
 msgstr ""
 
 msgid "answerCount"
-msgstr ""
+msgstr "nombre de réponses"
 
 msgid "answerExplanation"
 msgstr ""
@@ -259,7 +259,7 @@ msgid "applicantLocationRequirements"
 msgstr ""
 
 msgid "application"
-msgstr ""
+msgstr "application"
 
 msgid "applicationCategory"
 msgstr ""
@@ -333,9 +333,8 @@ msgstr ""
 msgid "artform"
 msgstr ""
 
-#, fuzzy
 msgid "articleBody"
-msgstr "corps de l'article"
+msgstr "corps de l’article"
 
 msgid "articleSection"
 msgstr ""
@@ -344,7 +343,7 @@ msgid "artist"
 msgstr "artiste"
 
 msgid "artworkSurface"
-msgstr ""
+msgstr "surface de l’œuvre d’art"
 
 msgid "asin"
 msgstr ""
@@ -1402,13 +1401,11 @@ msgstr ""
 msgid "encoding"
 msgstr "encodage"
 
-#, fuzzy
 msgid "encodingFormat"
-msgstr "format d'encodage"
+msgstr "format d’encodage"
 
-#, fuzzy
 msgid "encodingType"
-msgstr "type d'encodage"
+msgstr "type d’encodage"
 
 msgid "encodings"
 msgstr ""
@@ -3804,7 +3801,7 @@ msgid "sku"
 msgstr ""
 
 msgid "slogan"
-msgstr ""
+msgstr "slogan"
 
 msgid "smiles"
 msgstr ""
@@ -3861,10 +3858,10 @@ msgid "spokenByCharacter"
 msgstr ""
 
 msgid "sponsor"
-msgstr ""
+msgstr "sponsor"
 
 msgid "sport"
-msgstr ""
+msgstr "sport"
 
 msgid "sportsActivityLocation"
 msgstr ""
@@ -3900,7 +3897,7 @@ msgid "statType"
 msgstr ""
 
 msgid "status"
-msgstr ""
+msgstr "status"
 
 msgid "steeringPosition"
 msgstr ""
@@ -4017,7 +4014,7 @@ msgid "supportingData"
 msgstr ""
 
 msgid "surface"
-msgstr ""
+msgstr "surface"
 
 msgid "syllabusSections"
 msgstr ""
@@ -4080,13 +4077,14 @@ msgid "termsPerYear"
 msgstr ""
 
 msgid "text"
-msgstr ""
+msgstr "texte"
 
 msgid "textValue"
 msgstr ""
 
+#, fuzzy
 msgid "thumbnail"
-msgstr ""
+msgstr "vignette"
 
 msgid "thumbnailUrl"
 msgstr ""
@@ -4116,7 +4114,7 @@ msgid "tissueSample"
 msgstr ""
 
 msgid "title"
-msgstr ""
+msgstr "titre"
 
 msgid "titleEIDR"
 msgstr ""
@@ -4347,13 +4345,13 @@ msgid "vehicleConfiguration"
 msgstr ""
 
 msgid "vehicleEngine"
-msgstr ""
+msgstr "moteur du véhicule"
 
 msgid "vehicleIdentificationNumber"
-msgstr ""
+msgstr "numéro d’identification véhicule"
 
 msgid "vehicleInteriorColor"
-msgstr ""
+msgstr "couleur intérieure du véhicule"
 
 msgid "vehicleInteriorType"
 msgstr ""
@@ -4362,7 +4360,7 @@ msgid "vehicleModelDate"
 msgstr ""
 
 msgid "vehicleSeatingCapacity"
-msgstr ""
+msgstr "capacité des sièges du véhicule"
 
 msgid "vehicleSpecialUsage"
 msgstr ""
@@ -4371,16 +4369,16 @@ msgid "vehicleTransmission"
 msgstr ""
 
 msgid "vendor"
-msgstr ""
+msgstr "vendeur"
 
 msgid "verificationFactCheckingPolicy"
 msgstr ""
 
 msgid "version"
-msgstr ""
+msgstr "version"
 
 msgid "video"
-msgstr ""
+msgstr "vidéo"
 
 msgid "videoFormat"
 msgstr ""
@@ -4389,7 +4387,7 @@ msgid "videoFrameSize"
 msgstr ""
 
 msgid "videoQuality"
-msgstr ""
+msgstr "qualité vidéo"
 
 msgid "volumeNumber"
 msgstr ""
@@ -4398,13 +4396,13 @@ msgid "warning"
 msgstr ""
 
 msgid "warranty"
-msgstr ""
+msgstr "garantie"
 
 msgid "warrantyPromise"
-msgstr ""
+msgstr "promesse de garantie"
 
 msgid "warrantyScope"
-msgstr ""
+msgstr "portée de la garantie"
 
 msgid "webCheckinTime"
 msgstr ""
@@ -4413,22 +4411,22 @@ msgid "webFeed"
 msgstr ""
 
 msgid "weight"
-msgstr ""
+msgstr "poids"
 
 msgid "weightTotal"
-msgstr ""
+msgstr "poids total"
 
 msgid "wheelbase"
 msgstr ""
 
 msgid "width"
-msgstr ""
+msgstr "largeur"
 
 msgid "winner"
-msgstr ""
+msgstr "gagnant"
 
 msgid "wordCount"
-msgstr ""
+msgstr "nombre de mots"
 
 msgid "workExample"
 msgstr ""
@@ -4437,22 +4435,22 @@ msgid "workFeatured"
 msgstr ""
 
 msgid "workHours"
-msgstr ""
+msgstr "horaires de travail"
 
 msgid "workLocation"
-msgstr ""
+msgstr "lieu de travail"
 
 msgid "workPerformed"
-msgstr ""
+msgstr "travail effectué"
 
 msgid "workPresented"
-msgstr ""
+msgstr "travail présenté"
 
 msgid "workTranslation"
 msgstr ""
 
 msgid "workload"
-msgstr ""
+msgstr "charge de travail"
 
 msgid "worksFor"
 msgstr ""
@@ -4461,16 +4459,17 @@ msgid "worstRating"
 msgstr ""
 
 msgid "xpath"
-msgstr ""
+msgstr "xPath"
 
 msgid "yearBuilt"
-msgstr ""
+msgstr "année de construction"
 
 msgid "yearlyRevenue"
 msgstr ""
 
 msgid "yearsInOperation"
-msgstr ""
+msgstr "années d’activité"
 
+#, fuzzy
 msgid "yield"
-msgstr ""
+msgstr "rendement"
