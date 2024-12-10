@@ -35,8 +35,9 @@ async function types(release)
 
 /**
  * @param {String} po
+ * @param {Boolean} onlyNotNull
  */
-function poToObject(po)
+function poToObject(po, onlyNotNull = false)
 	{
 	// TODO: fuzzy
 	/*
@@ -54,6 +55,11 @@ function poToObject(po)
 	
 		return [msgid, msgstr];
 		});
+
+	if (onlyNotNull)
+		{
+		messages = messages.filter(message => message[1] !== null);
+		}
 
 	return messages.reduce((previous, current) => { previous[current[0]] = current[1]; return previous; }, {});
 	}
