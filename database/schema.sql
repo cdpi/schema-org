@@ -5,7 +5,10 @@ CREATE TABLE `property`
 	`label` TEXT NOT NULL,
 	`comment` TEXT NOT NULL,
 
-	`supersedes` TEXT,
+	`equivalentProperty` TEXT,
+
+	`inverseOf` TEXT,
+
 	`supersededBy` TEXT,
 	`isPartOf` TEXT
 	);
@@ -17,13 +20,13 @@ CREATE INDEX `index_property_isPartOf` ON `property` (`isPartOf`);
 /*
 CREATE TABLE `property`
 	(
-	
-	
-	
 	`subPropertyOf` TEXT,
-	`equivalentProperty` TEXT,
-	`inverseOf` TEXT,
 	
+	subproperties
+	domainIncludes
+	rangeIncludes
+
+	supersedes
 	);
 
 

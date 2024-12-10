@@ -29,7 +29,7 @@ const parseProperty = record =>
 	property.domainIncludes = columnAsArray(record.domainIncludes);
 	property.rangeIncludes = columnAsArray(record.rangeIncludes);
 	property.inverseOf = columnAsString(record.inverseOf);
-	property.supersedes = columnAsString(record.supersedes);
+	property.supersedes = columnAsArray(record.supersedes);
 	property.supersededBy = columnAsString(record.supersededBy);
 	property.isPartOf = columnAsString(record.isPartOf);
 

@@ -16,7 +16,7 @@ nunjucks.configure("views", {express: app, autoescape: true, watch: true});
 
 app.get("/", (request, response) =>
 	{
-	response.render("home.njk", {abc: "Kamelott"});
+	response.render("home.njk");
 	});
 
 //app.use("/api", model);

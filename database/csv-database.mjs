@@ -42,6 +42,51 @@ async function createDatabaseFromCSV(path, release)
 	database.close();
 	}
 
+function columnStatistics(database, table, columns)
+	{
+	let tableStatistics = {};
+
+	columns.forEach(column =>
+		{
+		let records = database.prepare(`SELECT ${column} FROM ${table};`).all().map(record => record[column]);
+
+		let statistics =
+			{
+			count: 0,
+			blank: 0,
+			comma: false,
+			unique: null
+			};
+
+		let values = new Set();
+
+		records.forEach(record =>
+			{
+			statistics.count++;
+
+			if (record.trim().length === 0)
+				{
+				statistics.blank++;
+				}
+			else
+				{
+				if (!statistics.comma)
+					{
+					statistics.comma = record.indexOf(",") >= 0;
+					}
+				}
+
+			values.add(record);
+			});
+
+		statistics.unique = values.size === statistics.count;
+
+		tableStatistics[column] = statistics;
+		});
+
+	return tableStatistics;
+	}
+
 /**
  * @param {String} path
  */
@@ -49,23 +94,25 @@ function statistics(path)
 	{
 	let database = new SQLite(path);
 
-	/*
-	let tables = database.prepare("SELECT name FROM sqlite_master WHERE type = 'table';").all();
+	let property = ["id", "label", "comment", "subPropertyOf", "equivalentProperty", "subproperties", "domainIncludes", "rangeIncludes", "inverseOf", "supersedes", "supersededBy", "isPartOf"];
+	let type = ["id", "label", "comment", "subTypeOf", "enumerationtype", "equivalentClass", "properties", "subTypes", "supersedes", "supersededBy", "isPartOf"];
 
-	tables.forEach(table =>
-		{
-		console.log(table.name);
+	//let columns = Object.keys(database.prepare("SELECT * FROM property LIMIT 1;").all()[0]).join(",");
+	//let fields = property.join(",");
+	//console.log(columns === fields);
 
-		let columns = database.prepare(`SELECT * FROM pragma table_info(${table.name});`).all();
+	//let columns = Object.keys(database.prepare("SELECT * FROM type LIMIT 1;").all()[0]).join(",");
+	//let fields = type.join(",");
+	//console.log(columns === fields);
 
-		columns.forEach(column =>
-			{
-			console.log(column);
-			});
-		});
-	*/
+	let statistics = {};
+
+	statistics.property = columnStatistics(database, "property", property);
+	statistics.type = columnStatistics(database, "type", type);
 
 	database.close();
+
+	return statistics;
 	}
 
 export
