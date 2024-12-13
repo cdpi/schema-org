@@ -28,3 +28,7 @@
 	$gradient-radial: radial-gradient(#ffcdb2ff, #ffb4a2ff, #e5989bff, #b5838dff, #6d6875ff);
 	*/
 	}
+
+/*
+background-image: linear-gradient(90deg, rgb(180, 71, 235) 0%, rgb(87, 174, 255) 95%);
+*/

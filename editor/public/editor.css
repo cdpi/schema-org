@@ -1,0 +1,70 @@
+
+:root
+	{
+	--ui-foreground: #202020;
+	--ui-background: #F7F7F7;
+	--ui-border: 1px solid #CCCCCC;
+	}
+
+*
+	{
+	box-sizing: border-box;
+	}
+
+body
+	{
+	background-color: white;
+	min-height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	}
+
+header
+	{
+	background-color: var(--ui-background);
+	border-bottom: var(--ui-border);
+	/*padding: 2em;*/
+	flex: 0 0 auto;
+	display: flex;
+	position: sticky;
+	top: 0px;
+	}
+
+menu
+	{
+	border-right: var(--ui-border);
+	margin: 0;
+	padding: 2em;
+	width: 20rem;
+	display: inline-block;
+	}
+
+nav
+	{
+	margin: 0;
+	padding: 2em;
+	flex: 1;
+	}
+
+main
+	{
+	margin: 0;
+	padding: 2em;
+	flex: 1 0 auto;
+	}
+
+div
+	{
+	display: flex;
+	flex-direction: row;
+	}
+
+aside
+	{
+	background-color: var(--ui-background);
+	border-right: var(--ui-border);
+	flex: 0 0 20rem;
+	padding: 1em;
+	order: -1;
+	}

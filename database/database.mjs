@@ -6,34 +6,93 @@ import { getEnumerations } from "../parser/csv/enumerations.mjs";
 
 // node --experimental-sqlite database.mjs
 
-let read = path => readFileSync(path, "utf-8");
+const read = path => readFileSync(path, "utf-8");
 
 let release = "28.1";
-
-let properties = arrayAsObject(await downloadAndParseProperties(release));
-//let types = arrayAsObject(await downloadAndParseTypes(release));
-//let enumerations = getEnumerations(types);
 
 let path = "things.sqlite";
 
 let database = new SQLite(path);
 
-database.exec(read("schema.sql"));
+database.exec(read("sql/schema.sql"));
+
+let properties = arrayAsObject(await downloadAndParseProperties(release));
+let types = arrayAsObject(await downloadAndParseTypes(release));
+let enumerations = getEnumerations(types);
+
+function insertProperties(properties)
+	{
+	let insertProperty = database.prepare(read("sql/insert-property.sql"));
+
+	properties.forEach(property =>
+		{
+		delete property.subPropertyOf;
+		delete property.subproperties;
+		delete property.domainIncludes;
+		delete property.rangeIncludes;
+		delete property.supersedes;
+	
+		insertProperty.run(property);
+		});
+	}
+
+function insertPropertiesHierarchy(properties)
+	{
+	let insertPropertyHierarchy = database.prepare(read("sql/insert-property-hierarchy.sql"));
+
+	properties.forEach(property =>
+		{
+		if (property.subproperties !== null)
+			{
+			property.subproperties.forEach(subProperty =>
+				{
+				let hierarchy =
+					{
+					property: subProperty,
+					parent: property.id
+					};
+
+				insertPropertyHierarchy.run(hierarchy);
+				});
+			}
+		else
+			{
+			let hierarchy =
+				{
+				property: property.id,
+				parent: null
+				};
+
+			insertPropertyHierarchy.run(hierarchy);
+			}
+		});
+	}
+
+function insertTypes(types)
+	{
+	let insertType = database.prepare(read("sql/insert-type.sql"));
+
+	types.forEach(type =>
+		{
+		delete type.subTypeOf;
+		delete type.enumerationtype;
+		delete type.properties;
+		delete type.subTypes;
+		delete type.supersedes;
+
+		type.equivalentClass = (type.equivalentClass === null) ? null : JSON.stringify(type.equivalentClass);
+
+		insertType.run(type);
+		});
+	}
 
 database.exec("BEGIN TRANSACTION;");
 
-let insertProperty = database.prepare(read("insert-property.sql"));
+insertProperties(Object.values(structuredClone(properties)));
 
-Object.values(properties).forEach(property =>
-	{
-	delete property.subPropertyOf;
-	delete property.subproperties;
-	delete property.domainIncludes;
-	delete property.rangeIncludes;
-	delete property.supersedes;
+insertPropertiesHierarchy(Object.values(structuredClone(properties)));
 
-	insertProperty.run(property);
-	});
+insertTypes(Object.values(types));
 
 database.exec("COMMIT;");
 
